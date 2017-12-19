@@ -21,5 +21,6 @@ should adhere to the following format:
 You can refer to the files in the <code>test-hands</code> directory for
 examples.
 
-After you've create the hand files, run the following:
+After you've create the hand files, run the following from the root of this
+project's directory:
 <pre><code>java -jar target/poker.app.evaluator-1.0-SNAPSHOT.jar &lt;path_to_hand1&gt; &lt;path_to_hand2&gt;</code></pre>
