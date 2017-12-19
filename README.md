@@ -2,8 +2,10 @@
 A application that evaluates two Poker hands and determines the winner.
 
 ### How to Build
-1. Install the Java 8 SDK and a compatible version of Maven. This application
-was tested with Maven 3.3.9.
+1. Install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+and a compatible version of Maven. This application was tested
+with [Maven 3.5.2](https://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/).
+You can find instructions to install Maven [here](https://maven.apache.org/install.html).
 2. From the root of the cloned repo, run the following:
 <pre><code>mvn clean package</code></pre>
 
