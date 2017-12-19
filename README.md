@@ -10,8 +10,7 @@ You can find instructions to install Maven [here](https://maven.apache.org/insta
 <pre><code>mvn clean package</code></pre>
 
 The command above will build an executable JAR file and run a suite of unit
-tests. There will be an executable jar in the <code>target</code> directory
-that gets created.
+tests. The JAR will be in the <code>target</code> directory that gets created.
 
 ### How to execute
 You will need to create a test file with 5 lines representing cards. Each line
