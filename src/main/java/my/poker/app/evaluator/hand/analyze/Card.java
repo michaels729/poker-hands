@@ -1,5 +1,7 @@
 package my.poker.app.evaluator.hand.analyze;
 
+import java.util.Locale;
+
 public class Card {
     public enum Rank {
         TWO,
@@ -40,11 +42,20 @@ public class Card {
         this.suit = suit;
     }
 
+    public Card(String rankName, String suitName) {
+        this(Rank.valueOf(rankName.toUpperCase(Locale.ENGLISH)),
+                Suit.valueOf(suitName.toUpperCase(Locale.ENGLISH)));
+    }
+
     public Rank getRank() {
         return rank;
     }
 
     public Suit getSuit() {
         return suit;
+    }
+
+    public static Card toCard(String rank, String suit) {
+        return new Card(rank, suit);
     }
 }

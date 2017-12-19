@@ -1,5 +1,8 @@
 package my.poker.app.evaluator.hand.analyze;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -219,5 +222,35 @@ public class HandEvaluator {
             }
         }
         return numPairs == 2;
+    }
+
+    public static void main(String[] args) throws IOException {
+        if (args.length != 2) {
+            System.out.println("Input must reference 2 files");
+            return;
+        }
+
+        List<Hand> hands = new ArrayList(2);
+        for (String filename : args) {
+            try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+                List<Card> cards = new ArrayList<>(5);
+                String line;
+                while ((line = br.readLine()) != null) {
+                    // Skip empty lines or lines with only whitespace
+                    if (!line.matches("\\s*")) {
+                        line = line.trim();
+                        String[] cardParams = line.split("\\s+");
+                        cards.add(Card.toCard(cardParams[0], cardParams[1]));
+                    }
+                }
+                if (cards.size() != 5) {
+                    System.out.println("Each hand must have 5 cards.");
+                }
+                hands.add(new Hand(cards));
+            }
+        }
+
+        HandEvaluator evaluator = new HandEvaluator();
+        evaluator.printResultMessage(hands.get(0), hands.get(1));
     }
 }
