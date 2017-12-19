@@ -1,5 +1,5 @@
 # Poker Hands
-A application that evaluates two Poker hands and determines the winner.
+An application that evaluates two Poker hands and determines the winner.
 
 ### How to Build
 1. Install the [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -9,9 +9,9 @@ You can find instructions to install Maven [here](https://maven.apache.org/insta
 2. From the root of the cloned repo, run the following:
 <pre><code>mvn clean package</code></pre>
 
-The command above will build an executable JAR file as well as run a suite of
-unit tests. There will be an executable jar in the <code>target</code>
-directory created.
+The command above will build an executable JAR file and run a suite of unit
+tests. There will be an executable jar in the <code>target</code> directory
+that gets created.
 
 ### How to execute
 You will need to create a test file with 5 lines representing cards. Each line
