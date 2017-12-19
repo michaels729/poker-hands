@@ -19,7 +19,8 @@ should adhere to the following format:
 <pre><code>RANK SUIT</code></pre>
 
 You can refer to the files in the <code>test-hands</code> directory for
-examples.
+examples. **The hands declared must be valid for a standard game of Poker
+with a 52-card deck. The *Five of a Kind* rule is not supported.**
 
 After you've create the hand files, run the following from the root of this
 project's directory:
