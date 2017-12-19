@@ -13,9 +13,9 @@ directory created.
 
 ### How to execute
 You will need to create a test file with 5 lines representing cards. Each line
-should follow the following format:
+should adhere to the following format:
 
-<pre><code>&lt;RANK&gt; &lt;SUIT&gt;</code></pre>
+<pre><code>RANK SUIT</code></pre>
 
 You can refer to the files in the <code>test-hands</code> directory for
 examples.
